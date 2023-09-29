@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title> Add Items</title>
+{% endblock %}
+
+
+{% block content %}
+    <form class="form" method="post">
+        <h1>Add a New Item</h1>
+        <br>
+        <input class="input"
+                type="text" name="item"
+                placeholder="Enter item"
+                value="{{ request.form['item'] }}"></input>
+        <br>
+
+        <br>
+        <input  name="price"
+                class="input" type="number"
+                value="{{ request.form['price'] }}"
+                placeholder="Enter price"></input>
+        <br>
+        <button class="submit" type="submit">Submit</button>
+    </form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

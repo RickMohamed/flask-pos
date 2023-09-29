@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+        <title> {{title}} </title>
+{% endblock%}
+
+
+
+
+{% block content %}
+    <h2 class="title">Point of Sale</h2>
+    <ul class="item-container">
+        {% for item in items %}
+            <li class="item">
+                <h3>{{ item.product }}</h3>
+                <p>$ {{ item.price }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
